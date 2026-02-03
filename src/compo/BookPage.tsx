@@ -23,7 +23,7 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat })
     return (
         <div className="book-page">
             <h2>{event.title}</h2>
-            <p>{event.description}</p>
+            <p className="book-description">{event.description}</p>
             {event.image && <img src={event.image} alt={event.title} />}
             {event.choices && (
                 <div className="choices">
