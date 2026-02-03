@@ -36,14 +36,22 @@ body {
     margin-bottom: 20px;
 }
 
-.cover-page {
+.cover-page-container {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    background-color: black; /* Fond noir pour les vides latéraux */
     position: relative;
+    overflow: hidden;
+}
+
+.cover-image {
+    height: 100vh;
+    width: auto;
+    object-fit: contain; /* Conserve les proportions et remplit la hauteur */
+    cursor: pointer;
 }
 
 .cover-overlay {
