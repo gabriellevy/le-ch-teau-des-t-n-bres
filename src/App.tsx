@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { useGameState } from "./hooks/useGameState";
+import "./styles/global.css";
+import {CoverPage} from "./compo/CoverPage.tsx";
+import {Inventory} from "./compo/Inventory.tsx";
+import {BookPage} from "./compo/BookPage.tsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+    const [gameStarted, setGameStarted] = useState(false);
+    const { state, currentEvent, handleChoice, handleCombat } = useGameState();
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    const handleStartGame = () => {
+        setGameStarted(true);
+    };
 
-export default App
+    if (!gameStarted) {
+        return <CoverPage onStart={handleStartGame} />;
+    }
+
+    if (!currentEvent) {
+        return <div>Chargement...</div>;
+    }
+
+    return (
+        <div className="app">
+            <Inventory state={state} />
+            <BookPage
+                event={currentEvent}
+                onChoice={handleChoice}
+                onCombat={handleCombat}
+            />
+        </div>
+    );
+};
+
+export default App;

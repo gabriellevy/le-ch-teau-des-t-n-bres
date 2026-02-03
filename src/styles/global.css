@@ -1,0 +1,72 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #f5f0e6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.book-page {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+.choices button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.inventory {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cover-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.cover-overlay {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    font-family: "Times New Roman", serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    animation: pulse 2s infinite;
+}
+
+.cover-text {
+    margin: 0;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
