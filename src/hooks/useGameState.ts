@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import type {Evt, GameState} from "../types";
 import {livre} from "../donnees/livre.ts";
+import {d6} from "../utils/des.ts";
 
 export const useGameState = () => {
+    const vie: number = (d6() + d6())*4;
     const [state, setState] = useState<GameState>({
         currentEventId: 0,
-        lifePoints: 24, // Valeur par défaut, à calculer avec les dés
-        maxLifePoints: 24,
+        vie: vie,
+        maxLifePoints: vie,
         inventory: [],
         experiencePoints: 0,
         permanentLifePoints: 0,
@@ -29,33 +31,29 @@ export const useGameState = () => {
         }));
     };
 
-    const rollDice = (sides: number = 6): number => {
-        return Math.floor(Math.random() * sides) + 1;
-    };
-
     const handleCombat = (enemyLife: number, enemyDamage: number, playerDamage: number) => {
-        let newLifePoints = state.lifePoints;
+        let nouvelleVie = state.vie;
         let enemyCurrentLife = enemyLife;
 
-        while (newLifePoints > 0 && enemyCurrentLife > 0) {
-            const playerRoll = rollDice() + rollDice();
-            const enemyRoll = rollDice() + rollDice();
+        while (nouvelleVie > 0 && enemyCurrentLife > 0) {
+            const playerRoll = d6() + d6();
+            const enemyRoll = d6() + d6();
 
             if (playerRoll > 6) {
                 enemyCurrentLife -= playerRoll - 6 + playerDamage;
             }
             if (enemyRoll > 6 && enemyCurrentLife > 0) {
-                newLifePoints -= enemyRoll - 6 + enemyDamage;
+                nouvelleVie -= enemyRoll - 6 + enemyDamage;
             }
         }
 
         setState((prev) => ({
             ...prev,
-            lifePoints: newLifePoints > 0 ? newLifePoints : 0,
+            vie: nouvelleVie > 0 ? nouvelleVie : 0,
         }));
 
-        return newLifePoints > 0;
+        return nouvelleVie > 0;
     };
 
-    return { state, currentEvent, handleChoice, handleCombat, rollDice };
+    return { state, currentEvent, handleChoice, handleCombat };
 };

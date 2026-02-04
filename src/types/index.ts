@@ -28,7 +28,7 @@ export type Combat = {
 
 export type GameState = {
     currentEventId: number;
-    lifePoints: number;
+    vie: number;
     maxLifePoints: number;
     inventory: string[];
     experiencePoints: number;
