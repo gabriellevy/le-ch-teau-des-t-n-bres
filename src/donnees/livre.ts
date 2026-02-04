@@ -42,6 +42,14 @@ export const livre: Evt[] = [
       6: Si vous n'avez presque plus de POINTS DE VIE et que vous vous trouviez en danger, essayez toujours de susciter une Réaction Amicale de votre ennemi, de vous le concilier, même si les chances de l'obtenir sont infimes. Si Vous avez réussi à vous procurer de l'or la corruption est également possible dans les paragraphes marqués *C.
       
       7 : Prenez note, sur votre Feuille d'Aventure, dé tous les objets que vous pouvez trouver ou emporter avec vous durant votre voyage mais dont vous ne vous servez pas. Ils pourront vous rendre les plus grands services dans vos futures missions.
+      
+      Le Royaume d'Avalon
+      
+      C'etait une époque merveilleuse à vivre, en dépit des dangers que l'on y courait. Le fils de Pendragon, appelé le roi Arthur, occupait le trône d'Avalon, appuyant son autorité sur sa grande épée Excalibur qu il avait arrachée, enfant, d'un bloc de pierre, alors que les hommes les plus forts ne pouvaient pas même la bouger. Arthur avait apporté au royaume une sorte de paix. Avant lui, les petits seigneurs locaux ne cessaient de se battre et de se quereller entre eux comme des oies sauvages si bien que, d'un bout de l'an à l'autre, jamais le pays ne connaissait un instant de tranquillité. Mais Arthur avait changé cela ; et avec une unique et merveilleuse invention : la Chevalerie.
+      
+      Une institution étrange, la Chevalerie. Ou du moins lorsque Arthur la fonda. Nous y sommes habitués aujourd'hui, si bien qu'elle nous apparaît comme une loi de la nature, telle la pesanteur ou le vol des oiseaux migrateurs vers le sud, à l'automne. Mais, en ce temps-là, c'était une idée tout à fait étrange. A l'epoque, si l'on était fort et que l'on voulait quelque chose appartenant à un faible, on le lui prenait. Et si l'on était chevalier et qu'on voyait une jeune fille emportée par un Dragon, on la laissait dévorer par le monstre. (Eh oui, et si l'on était la jeune fille en question, on se laissait le plus souvent manger, sans songer à se défendre comme devrait le faire toute jeune fille digne de ce nom). Mais l'étrange idée de la Chevalerie conçue par Arthur devait changer tout cela. Elle allait instaurer la loyauté, la courtoisie, la droiture, la justice, la dignité, l'indépendance et bien d'autres qualités rares qui faisaient cruellement défaut en Avalon, meme a l'époque de Pendragon. Elle n'a pas inventé le cricket comme l'affirment beaucoup de sots moineaux, mais les tournois et les joutes qui le valaient bien. Et si l'on vous raconte que les joutes etaient un sport violent et brutal simplement parce que de braves chevaliers cherchaient à se jeter mutuellement à bas de leurs chevaux, vous pourrez faire remarquer que c'était un progrès considérable sur les excès auxquels se livraient les hommes avant l'invention des tournois. Mieux vaut ne pas y penser. Au coeur même de tout ce code de la Chevalerie, Arthur avait encore inventé autre chose : la Table ronde. il s'agissait bel et bien d'une Table Ronde en chène avec des incrustations d'acajou, assez grande pour qu'une douzaine de chevaliers puissent s'y asseoir à l'aise, même en tenant compte de la place qu ils occupaient avec leurs armures. Mais la Table Ronde était plus que cela, beaucoup plus. La Table ronde était tout un mode de vie. E: c était un mode de vie qui exerçait un vif attrait sur toute une classe de gens. A peine Arthur avait-il fait mettre en place cette Table Ronde (avant même que lie maître ébéniste en eût terminé les incrustations) que, de tôus les coins d'Avalon, les chevaliers briguèrent l'honneur de venir s'y asseoir. Il en arriva méme un de France — exploit réel avec le mauvais temps — pour savoir s'il y avait une place pour lui. Il s'appelait Lancelot du Lac et il eut en effet la chance d'obtenir, non seulement une place, mais une place de choix.
+      
+      Avec tant de chevaliers désireux de se joindre à lui, Arthur pouvait se permettre de choisir les meilleurs pour sa Table Ronde. Et c'est ce qu'il fit. Jamais n'avaient été rassemblés tant de vaillants héros depuis que les Romains avaient été chassés du pays. Galaad, Perceval, Lancelot, Gauvain, Guenièvre. La liste en est longue. Sinon que Guenièvre n'était pas exactement un chevalier mais l'épouse d'Arthur. Cependant elle s'asseyait souvent à la Table Ronde où elle était réputée, parmi l'assistance, pour sa sagesse et ses bons conseils.
     `,
         choix: [
             { id: 1, text: "Commencer l'aventure", nextEventId: 25 },
@@ -93,5 +101,20 @@ export const livre: Evt[] = [
             playerDamage: 2,
         },
     },
-    // Ajoute les autres événements ici...
+    // événements "spéciaux" qui ne sont aps vraiment des numéros dans le livre
+    // on va dire qu'ils commencent à 1000
+    {
+        id: 1000,
+        titre: "Dormir",
+        description: `
+      TODO
+    `,
+    },
+    {
+        id: 1001,
+        titre: "Le temps du rêve",
+        description: `
+      TODO
+    `,
+    },
 ];
