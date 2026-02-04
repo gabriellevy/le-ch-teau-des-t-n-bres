@@ -1,5 +1,5 @@
 import React from "react";
-import type {Evt} from "../types";
+import {type Evt, TypeSousPartie} from "../types";
 
 type BookPageProps = {
     event: Evt;
@@ -23,7 +23,25 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }:
     return (
         <div className="book-page">
             <h2>{event.titre}</h2>
-            <p className="book-description">{event.description}</p>
+            <div className="book-description">
+                {event.description.map((sousPartie, index) => {
+                    switch (sousPartie.type) {
+                        case TypeSousPartie.TEXTE:
+                            return <p key={index}>{sousPartie.contenu}</p>;
+                        case TypeSousPartie.IMAGE:
+                            return (
+                                <img
+                                    key={index}
+                                    src={sousPartie.contenu}
+                                    alt={sousPartie.alt}
+                                    className={sousPartie.className}
+                                />
+                            );
+                        default:
+                            return null;
+                    }
+                })}
+            </div>
             {event.image && <img src={event.image} alt={event.titre} />}
             {event.choix && (
                 <div className="choices">

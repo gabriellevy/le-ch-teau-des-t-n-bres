@@ -85,3 +85,12 @@ body {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+.book-description img.event-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

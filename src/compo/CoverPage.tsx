@@ -1,5 +1,5 @@
 import React from "react";
-import couverture from "../images/couverture.jpg"; // Assure-toi que le fichier existe
+import couverture from "../images/couverture.jpg";
 
 type CoverPageProps = {
     onStart: () => void;
