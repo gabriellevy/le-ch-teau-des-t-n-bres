@@ -1,8 +1,8 @@
 export type Evt = {
     id: number;
-    title: string;
+    titre: string;
     description: string;
-    choices?: Choice[];
+    choix?: Choice[];
     combat?: Combat;
     image?: string;
     isTerminal?: boolean;

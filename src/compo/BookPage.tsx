@@ -7,7 +7,7 @@ type BookPageProps = {
     onCombat: (enemyLife: number, enemyDamage: number, playerDamage: number) => boolean;
 };
 
-export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }) => {
+export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }:Readonly<BookPageProps>) => {
     const handleCombat = () => {
         if (event.combat) {
             const playerWins = onCombat(
@@ -22,14 +22,14 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat })
 
     return (
         <div className="book-page">
-            <h2>{event.title}</h2>
+            <h2>{event.titre}</h2>
             <p className="book-description">{event.description}</p>
-            {event.image && <img src={event.image} alt={event.title} />}
-            {event.choices && (
+            {event.image && <img src={event.image} alt={event.titre} />}
+            {event.choix && (
                 <div className="choices">
-                    {event.choices.map((choice) => (
-                        <button key={choice.id} onClick={() => onChoice(choice.nextEventId)}>
-                            {choice.text}
+                    {event.choix.map((choix) => (
+                        <button key={choix.id} onClick={() => onChoice(choix.nextEventId)}>
+                            {choix.text}
                         </button>
                     ))}
                 </div>

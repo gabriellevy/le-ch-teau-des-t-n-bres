@@ -3,7 +3,7 @@ import type {Evt} from "../types";
 export const livre: Evt[] = [
     {
         id: 0,
-        title: "Introduction",
+        titre: "Introduction",
         description: `
       Ecoutez-moi bien —je veux faire un sortilège. Et ne vous agitez pas, surtout ! Vous savez comme toute agitation m'est désagréable. Non, vous ne le savez pas. Eh bien, vous l'apprendrez. Pour ça, oui. Les gens de mon âge n'aiment pas l'agitation. Je suis tellement plus vieux que vous. De plus, je suis mort. Mort des centaines d'années avant votre naissance. Mais un petit détail comme celui-là est sans importance. Ainsi sont les magiciens. Revenons à mon sortilège. Vous ne pouvez pas me voir, bien entendu. Ni m'entendre. Mais vous pouvez lire ce que j'écris. Aucun doute là-dessus. Etes- vous nerveux ? On le serait à moins. C'est un sortilege très puissant, un sortilège auquel je n'ai pas souvent recours. Cela prend trop de temps. Pour certains d'entre eux, il suffit de marmonner un mot. Pour d'autres, d'agiter une baguette magique. Mais celui-ci impose d'écrire tout un livre. Le livre que v ous tenez en main. Un livre entier pour un unique sortilège ! J'ai presque dépassé l'âge d'user de sortilèges aussi longs, mais le Roi insiste. Car on ne peut laisser plus longtemps Ansalom agir ainsi à sa guise. il va falloir que vous m'aidiez, figurez-vous. Vous ne pouvez pas vous contenter de lire simplement ce livre. Surtout si vous devez devenir un grand magicien comme moi et passer votre vie à recevoir des ordres du Roi. Non, vous devez y mettre du vôtre. Je ne dispose pas de corps dans votre époque, voilà l'ennui. J'ai donc besoin d'un assistant pour m'apporter divers objets. Vous allez être mon assistant, ou plutôt mon apprenti.
       
@@ -43,45 +43,45 @@ export const livre: Evt[] = [
       
       7 : Prenez note, sur votre Feuille d'Aventure, dé tous les objets que vous pouvez trouver ou emporter avec vous durant votre voyage mais dont vous ne vous servez pas. Ils pourront vous rendre les plus grands services dans vos futures missions.
     `,
-        choices: [
+        choix: [
             { id: 1, text: "Commencer l'aventure", nextEventId: 25 },
         ],
     },
     {
         id: 1,
-        title: "Défaite contre Jake",
+        titre: "Défaite contre Jake",
         description: `
       Jake vous a mis à terre. Vous perdez 10 points de vie, mais vous survivrez.
       John le Fermier va bientôt revenir...
     `,
-        choices: [
+        choix: [
             { id: 1, text: "Continuer", nextEventId: 3 },
         ],
     },
     {
         id: 2,
-        title: "Victoire contre Jake",
+        titre: "Victoire contre Jake",
         description: `
       Jake s'enfuit en reniflant. Vous avez gagné, mais vous êtes blessé.
       John le Fermier va bientôt revenir...
     `,
-        choices: [
+        choix: [
             { id: 1, text: "Continuer", nextEventId: 3 },
         ],
     },
     {
         id: 3,
-        title: "Retour à la ferme",
+        titre: "Retour à la ferme",
         description: `
       Vous retournez à la ferme avec John. La vie continue, mais une aventure vous attend...
     `,
-        choices: [
+        choix: [
             { id: 1, text: "Aller à Camelot", nextEventId: 59 },
         ],
     },
     {
         id: 25,
-        title: "La mission de Pip",
+        titre: "La mission de Pip",
         description: `
       Jake le Teigneux surgit devant vous sur la place du marché. Il veut vous battre.
       Vous n'avez pas le choix : vous devez vous défendre.
