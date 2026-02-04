@@ -29,9 +29,9 @@ export type Combat = {
 export type GameState = {
     currentEventId: number;
     vie: number;
-    maxLifePoints: number;
+    maxVie: number;
     inventory: string[];
-    experiencePoints: number;
+    xp: number;
     permanentLifePoints: number;
     visitedEvents: number[];
     map: MapData;

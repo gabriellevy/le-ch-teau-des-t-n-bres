@@ -8,9 +8,9 @@ export const useGameState = () => {
     const [state, setState] = useState<GameState>({
         currentEventId: 0,
         vie: vie,
-        maxLifePoints: vie,
+        maxVie: vie,
         inventory: [],
-        experiencePoints: 0,
+        xp: 0,
         permanentLifePoints: 0,
         visitedEvents: [],
         map: { nodes: [], edges: [] },
