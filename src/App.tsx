@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useGameState } from "./hooks/useGameState";
 import "./styles/global.css";
 import {CoverPage} from "./compo/CoverPage.tsx";
-import {Inventory} from "./compo/Inventory.tsx";
+import {Inventaire} from "./compo/Inventaire.tsx";
 import {BookPage} from "./compo/BookPage.tsx";
 
 const App: React.FC = () => {
@@ -23,12 +23,12 @@ const App: React.FC = () => {
 
     return (
         <div className="app">
-            <Inventory state={state} />
             <BookPage
                 event={currentEvent}
                 onChoice={handleChoice}
                 onCombat={handleCombat}
             />
+            <Inventaire state={state} />
         </div>
     );
 };

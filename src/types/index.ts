@@ -8,11 +8,11 @@ export type Combat = {
     defaite?: number;
 };
 
-export type GameState = {
+export type EtatJeu = {
     currentEventId: number;
     vie: number;
     maxVie: number;
-    inventory: string[];
+    inventaire: string[];
     xp: number;
     permanentLifePoints: number;
     visitedEvents: number[];

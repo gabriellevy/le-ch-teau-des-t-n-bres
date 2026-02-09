@@ -1,18 +1,18 @@
 import React from "react";
-import type {GameState} from "../types";
+import type {EtatJeu} from "../types";
 
-type InventoryProps = {
-    state: GameState;
+type InventaireProps = {
+    state: EtatJeu;
 };
 
-export const Inventory: React.FC<InventoryProps> = ({ state }) => {
+export const Inventaire: React.FC<InventaireProps> = ({ state }) => {
     return (
-        <div className="inventory">
+        <div className="inventaire">
             <h3>VIE: {state.vie}/{state.maxVie}</h3>
             <h3>Points d'expérience: {state.xp}/20</h3>
             <h3>Inventaire:</h3>
             <ul>
-                {state.inventory.map((item, index) => (
+                {state.inventaire.map((item, index) => (
                     <li key={index}>{item}</li>
                 ))}
             </ul>

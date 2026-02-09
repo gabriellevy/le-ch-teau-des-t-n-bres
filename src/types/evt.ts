@@ -1,4 +1,4 @@
-import type {Combat, GameState} from "./index.ts";
+import type {Combat, EtatJeu} from "./index.ts";
 
 export type Evt = {
     id: number;
@@ -28,5 +28,5 @@ export type Choice = {
     text: string;
     nextEventId: number;
     requiredItem?: string;
-    condition?: (state: GameState) => boolean;
+    condition?: (state: EtatJeu) => boolean;
 };

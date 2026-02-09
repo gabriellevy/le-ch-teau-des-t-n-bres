@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import type {Evt, GameState} from "../types";
+import type {EtatJeu} from "../types";
 import {livre} from "../donnees/livre.ts";
 import {d6} from "../utils/des.ts";
+import type {Evt} from "../types/evt.ts";
 
 export const useGameState = () => {
     const vie: number = (d6() + d6())*4;
-    const [state, setState] = useState<GameState>({
+    const [state, setState] = useState<EtatJeu>({
         currentEventId: -1,
         vie: vie,
         maxVie: vie,
-        inventory: [],
+        inventaire: [],
         xp: 0,
         permanentLifePoints: 0,
         visitedEvents: [],
