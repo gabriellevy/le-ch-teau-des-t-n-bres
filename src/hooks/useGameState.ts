@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type {EtatJeu} from "../types";
 import {livre} from "../donnees/livre.ts";
 import {d6} from "../utils/des.ts";
@@ -17,14 +17,11 @@ export const useGameState = () => {
         map: { nodes: [], edges: [] },
     });
 
-    const [currentEvent, setCurrentEvent] = useState<Evt | null>(null);
-
-    useEffect(() => {
-        const event = livre.find((e) => e.id === state.currentEventId);
-        setCurrentEvent(event || null);
-    }, [state.currentEventId]);
+    const [currentEvent, setCurrentEvent] = useState<Evt | null>(livre[0]);
 
     const handleChoice = (nextEventId: number) => {
+        const event = livre.find((e) => e.id === nextEventId);
+        setCurrentEvent(event || null);
         setState((prev) => ({
             ...prev,
             currentEventId: nextEventId,
