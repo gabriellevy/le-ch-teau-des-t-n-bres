@@ -8,9 +8,9 @@ type InventaireProps = {
 export const Inventaire: React.FC<InventaireProps> = ({ state }) => {
     return (
         <div className="inventaire">
-            <h3>VIE: {state.vie}/{state.maxVie}</h3>
-            <h3>Points d'expérience: {state.xp}/20</h3>
-            <h3>Inventaire:</h3>
+            <h4>VIE: {state.vie}/{state.maxVie}</h4>
+            <h4>Points d'expérience: {state.xp}/20</h4>
+            <h4>Inventaire:</h4>
             <ul>
                 {state.inventaire.map((item, index) => (
                     <li key={index}>{item}</li>

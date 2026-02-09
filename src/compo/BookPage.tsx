@@ -12,8 +12,8 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }:
         if (event.combat) {
             const playerWins = onCombat(
                 event.combat.enemyLife,
-                event.combat.enemyDamage,
-                event.combat.playerDamage
+                event.combat.degatsEnnemi,
+                event.combat.degatsJoueur
             );
             const nextEventId = playerWins ? event.combat.victoire || 0 : event.combat.defaite || 0;
             onChoice(nextEventId);

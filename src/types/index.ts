@@ -1,8 +1,8 @@
 export type Combat = {
     enemy: string;
     enemyLife: number;
-    enemyDamage: number;
-    playerDamage: number;
+    degatsEnnemi: number;
+    degatsJoueur: number;
     reward?: string;
     victoire?: number;
     defaite?: number;

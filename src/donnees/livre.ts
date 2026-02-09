@@ -107,8 +107,8 @@ export const livre: Evt[] = [
         combat: {
             enemy: "Jake le Teigneux",
             enemyLife: 20,
-            enemyDamage: 2,
-            playerDamage: 2,
+            degatsEnnemi: 0,
+            degatsJoueur: 0,
             defaite: 1,
             victoire: 2,
         },

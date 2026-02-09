@@ -1,11 +1,11 @@
 import React from "react";
 import couverture from "../images/couverture.jpg";
 
-type CoverPageProps = {
+type CouvertureProps = {
     onStart: () => void;
 };
 
-export const CoverPage: React.FC<CoverPageProps> = ({ onStart }) => {
+export const Couverture: React.FC<CouvertureProps> = ({ onStart }) => {
     return (
         <div className="cover-page-container">
             <img

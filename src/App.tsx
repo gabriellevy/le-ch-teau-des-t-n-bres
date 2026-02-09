@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useGameState } from "./hooks/useGameState";
 import "./styles/global.css";
-import {CoverPage} from "./compo/CoverPage.tsx";
+import {Couverture} from "./compo/Couverture.tsx";
 import {Inventaire} from "./compo/Inventaire.tsx";
 import {BookPage} from "./compo/BookPage.tsx";
 
@@ -14,7 +14,7 @@ const App: React.FC = () => {
     };
 
     if (!gameStarted) {
-        return <CoverPage onStart={handleStartGame} />;
+        return <Couverture onStart={handleStartGame} />;
     }
 
     if (!currentEvent) {
