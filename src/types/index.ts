@@ -1,11 +1,17 @@
+export enum PhaseCombat {
+    enCours,
+    victoire,
+    defaite
+}
+
 export type Combat = {
     enemy: string;
-    enemyLife: number;
+    vieEnnemi: number;
     degatsEnnemi: number;
     degatsJoueur: number;
-    reward?: string;
-    victoire?: number;
-    defaite?: number;
+    phaseCombat?: PhaseCombat; // si phaseCombat est undefined, alors le combat n'est pas commencé
+    victoire: number;
+    defaite: number;
 };
 
 export type EtatJeu = {
@@ -17,6 +23,7 @@ export type EtatJeu = {
     permanentLifePoints: number;
     visitedEvents: number[];
     map: MapData;
+    combat: Combat|undefined;
 };
 
 export type MapData = {
