@@ -15,7 +15,7 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }:
                 event.combat.enemyDamage,
                 event.combat.playerDamage
             );
-            const nextEventId = playerWins ? event.combat.rewardEventId || 0 : event.combat.defeatEventId || 0;
+            const nextEventId = playerWins ? event.combat.victoire || 0 : event.combat.defaite || 0;
             onChoice(nextEventId);
         }
     };
@@ -29,7 +29,7 @@ export const BookPage: React.FC<BookPageProps> = ({ event, onChoice, onCombat }:
                         case TypeSousPartie.TEXTE:
                             return <p key={index}>{sousPartie.contenu}</p>;
                         case TypeSousPartie.TITRE:
-                            return <h4>{sousPartie.contenu}</h4>;
+                            return <h2>{sousPartie.contenu}</h2>;
                         case TypeSousPartie.IMAGE:
                             return (
                                 <img

@@ -3,7 +3,7 @@ import {type Evt, TypeSousPartie} from "../types/evt.ts";
 
 export const livre: Evt[] = [
     {
-        id: 0,
+        id: -1,
         titre: "Merlin",
         description: [
         {
@@ -70,10 +70,48 @@ export const livre: Evt[] = [
             alt: "Excalibur, l'épée du roi Arthur",
             className: "event-image",
         },
+            {
+                type: TypeSousPartie.TEXTE,
+                contenu: `
+          Un autre personnage s'asseyait souvent, lui aussi, à la Table Ronde sans être un chevalier. C'était un Druide, une sorte de prêtre doublé d'un faiseur de miracles. Son nom était Merlin et, pour les gens du peuple, il était Merlin l'Enchanteur. Les chevaliers, qui le craignaient, ne manquaient pas de l'appeler « Seigneur ». Arthur, qui le connaissait mieux le traitait de « vieux fou » mais c'était, dans la bouche du roi, un terme d'affection. Après tout, c'était Merlin qui avait planté l'épée dans' la pierre et contribué à faire d'Arthur le grand monarque qu'il était devenu. Ceci est véridique, encore qu'un autre sorcier (du nom d'Ansalom) se prétendît le seul artisan de cet exploit.
+          
+          Personne n'aimait Ansalom bien que rares fussent les chevaliers, même les plus braves, prêts à le traiter ouvertement de menteur. Ansalom était un être malfaisant et d'un caractère exécrable. Le genre de sorcier prêt à détruire vos récoltes comme rien. Et, comme personne ne tenait à voir ses récoltes detruites, les gens veillaient à se tenir à l'écart d'Ansalom.
+          
+          La Table Ronde se trouvait à la cour du roi Arthur, dans une ville appelée Camelot, une ville qui offrait un spectacle superbe, surtout en été avec les oriflammes flottant en haut des tours et le soleil scintillant sur les armures polies des hommes d'armes. Spectacle peut-être moins exaltant en hiver avec les oriflammes rabattues par la pluie et les armures attaquees par la rouille. Mais il faut dire qu'Arthur séjournait rarement à Camelot en hiver. Il allait en général s'installer en Cornouailles.
+          
+          Non loin de Camelot, facilement accessible à cheval, se trouvait une ferme. Rien d'imposant, d'énorme, de spectaculaire, encore qu'elle fût tenue par un homme libre et non par un serf. Cette ferme était située à cinq kilomètres environ au nord d'un bourg du nom de Glastonbury où se tenait un marché très proche de Camelot, mais la route était tellement sinueuse qu'en atteignant la ferme on avait parcouru près de dix kilomètres. Par ailleurs, la ferme ne recevait guère de visiteurs. Pourquoi s'y seraient-ils rendus ? S'ils avaient besoin de produits fermiers, ils allaient les acheter au marché de Glastonbury. La ferme était donc très isolée. Elle était, en outre, à peu près dénuée de tout confort, même le plus élémentaire. Bref, c'était un lieu aussi éloigné des splendeurs de Camelot que l'on pouvait l'imaginer. Dans cette ferme, vivait le jeune enfant adoptif du fermier dont le nom était John, et la femme de John, miriam ou, plutôt, Mary comme on l'appelait le plus souvent. Le jeune garçon, lui, s'appelait Pip. Pip menait une vie tranquille, paisible, sans histoires, marquée par le lent déroulement des saisons, interrompue seulement par le bourdonnement paresseux des insectes de l'été, ou les chants matinaux des oiseaux...
+        `
+            },
         ],
         choix: [
-            { id: 1, text: "Commencer l'aventure", nextEventId: 25 },
+            { id: 0, text: "Commencer l'aventure", nextEventId: 0 },
         ],
+    },
+    {
+        id: 0,
+        titre: "La mission de Pip",
+        description: [
+            {
+                type: TypeSousPartie.TEXTE,
+                contenu: `
+      — Je vais te tuer, moucheron ! Je vais te massacrer, te reduire en chair à pâté ! Je vais t'arracher la tête et te la fourrer sous le bras !
+      
+      C'est Jake le Teigneux qui parle, Pip. Un garçon plus agé que vous de trois ans et bien plus fort. Son père s'appelle aussi Jake — Jake le Fléau. Cinq frères ,trois plus jeunes, deux plus vieux, quatre soeurs toutes plus vieilles. Dans l'ensemble, c'est une famille de malfaisants. Ils vivent de rapines sur le marché de Glastonbury où vous vous trouvez en ce moment. C'est très tôt le matin et il n'y a presque personne ; votre père adoptif, John le Fermier, vient toujours de bonne heure au marché pour y décharger ses légumes. Malheureusement, il est parti chez le forgeron pour acheter un nouveau harnais pour cheval. Vous êtes donc tout seul sur la charrette,adossé a un sac de carottes, et Jake le Teigneux vient de surgir devant vous. Et il n'a pas l'air de vous vouloir du bien.
+      
+      Amène-toi, moucheron ! Descends de ta carriole que je te mette en pièces détachées, on pourrait débattre des raisons de l'attitude de Jake le Teigneux, une enfance malheureuse, le manque total d'un modèle à suivre, mais ça ne changéra pas grand-chose pour vous, Pip. Regardez autour de vous. Pas un chat en vue sur toute la place du marché. Personne. Il est trop tôt. Et John le Fermier ne sera pas revenu avant une demi-heure.
+      
+      Vous allez être contraint de vous battre contre lui. Vous battre, ou alors c'est lui qui vous tue, vous massacre, vous arrache la tête et vous la fourre sous le bras, bref vous réduit en chair à pâté. Vous n'avez guère le choix. Combattre ou fuir et vous ne pouvez pas fuir car John ne vous retrouverait jamais. Donc, c'est l'affrontement. Vous avez vos dés ? Jake le Teigneux a 20 points de vie, ce qui correspond à la moyenne pour un garçon de son âge. Descendez lentement de la charrette, Pip, surtout ne le quittez pas des yeux ; le gaillard a l'habitude de se jeter sur son adversaire à la moindre inattention, ce qui lui donne l'avantage de frapper le premier, chose à éviter à tout prix. Donc, approchez-vous de lui à pas comptés en le surveillant de près. Vous pourrez peut-être passer à l'attaque avant lui. Attention ! Vous lancez le dé une fois pour vous et une fois pour Jake le Teigneux. Celui qui obtient le meilleur score assène le premier coup. Tournez autour de lui, toujours avec lenteur. Ne vous pressez surtout pas.
+
+      — Allez, amène-toi, moucheron, que je te... Il parle trop. Profitez-en. Essayez de lui aplatir le nez. Ce n'est pas facile de lui atteindre le nez : il faut sortir un 8 au lieu d'un 6. Mais si vous le touchez, vous marquez un double dommage. Bon, inutile de s'étendre là-dessus. Lancez les dés et ouvrez les hostilités. Pas de risque de mort dans cette bagarre. Elle s'arrêtera dès que le premier combattant aura perdu au moins 10 points de vie.
+    `}],
+        combat: {
+            enemy: "Jake le Teigneux",
+            enemyLife: 20,
+            enemyDamage: 2,
+            playerDamage: 2,
+            defaite: 1,
+            victoire: 2,
+        },
     },
     {
         id: 1,
@@ -115,23 +153,6 @@ export const livre: Evt[] = [
         choix: [
             { id: 1, text: "Aller à Camelot", nextEventId: 59 },
         ],
-    },
-    {
-        id: 25,
-        titre: "La mission de Pip",
-        description: [
-            {
-                type: TypeSousPartie.TEXTE,
-                contenu: `
-      Jake le Teigneux surgit devant vous sur la place du marché. Il veut vous battre.
-      Vous n'avez pas le choix : vous devez vous défendre.
-    `}],
-        combat: {
-            enemy: "Jake le Teigneux",
-            enemyLife: 20,
-            enemyDamage: 2,
-            playerDamage: 2,
-        },
     },
     // événements "spéciaux" qui ne sont aps vraiment des numéros dans le livre
     // on va dire qu'ils commencent à 1000

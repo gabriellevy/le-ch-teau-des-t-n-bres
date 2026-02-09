@@ -6,7 +6,7 @@ import {d6} from "../utils/des.ts";
 export const useGameState = () => {
     const vie: number = (d6() + d6())*4;
     const [state, setState] = useState<GameState>({
-        currentEventId: 0,
+        currentEventId: -1,
         vie: vie,
         maxVie: vie,
         inventory: [],

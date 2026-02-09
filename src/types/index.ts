@@ -4,8 +4,8 @@ export type Combat = {
     enemyDamage: number;
     playerDamage: number;
     reward?: string;
-    rewardEventId?: number;
-    defeatEventId?: number;
+    victoire?: number;
+    defaite?: number;
 };
 
 export type GameState = {
